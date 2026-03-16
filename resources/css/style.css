@@ -1,0 +1,179 @@
+/* main css */
+
+/* Halfmoon Theming */
+:root {
+  --bs-primary: #ff0000;
+  --bs-primary-hover: red;
+  --bs-primary-rgb: 255, 0, 0;
+  --bs-body-bg: #000000;
+  --bs-body-bg-rgb: 0, 0, 0;
+  --bs-content-bg: #480000; 
+  --bs-border-color: #333333;
+  --bs-body-color: #ffffff;
+  --bs-body-font-family: "Major Mono Display", monospace;
+  --bs-btn-hover-bg: darkred;
+  animation-play-state: pause;
+}
+
+.card {
+  background: #000000;
+}
+
+.carousel-control-prev,
+.carousel-control-next,
+.carousel-indicators {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.carousel:hover .carousel-control-prev,
+.carousel:hover .carousel-control-next,
+.carousel:hover .carousel-indicators {
+  opacity: 1;
+}
+
+.carousel {
+  height: auto; /* banner height */
+  width: 100%;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(100%); /* standard brightness */
+  transition: filter 0.4s ease; /* smooth transition effect */
+}
+
+.carousel-item img .carousel-inner {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: brightness(100%);
+  transition: filter 0.4s ease;
+}
+
+.carousel:hover .carousel-item img {
+  filter: brightness(70%);
+}
+
+@media (max-width: 500px) {
+  .carousel, 
+  .carousel .carousel-item .carousel-inner img {
+    height: 180px;
+  }
+}
+
+.btn:hover {
+  background-color: darkred;
+  --bs-btn-active-bg: red;
+}
+
+.navbar .nav-link {
+  font-size: 1.2rem;
+  padding: 1rem 1.5rem;
+}
+
+.alert-danger {
+    --bs-alert-bg: #ff0000 !important;
+    --bs-alert-color: #ffffff !important;
+    --bs-alert-border-color: #ff0000;
+}
+
+.alert-success {
+    --bs-alert-bg: #28a745;
+    --bs-alert-color: #ffffff;
+}
+
+#test {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(129, 15, 15, 0.7);
+  transition: background-color .1s;
+}
+#test:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+#test:hover:after {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(45deg, rgba(129, 15, 15, 0.9), rgba(129, 15, 15, 0.7), rgba(129, 15, 15, 0.9));
+  background-size: 200% 200%;
+  background-position: 0% 100%;
+  animation-name: test_hover;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+@keyframes test_hover {
+  from {
+    background-position: 0% 100%;
+  }
+  to {
+    background-position: 100% 0%;
+  }
+}
+
+a {
+  text-decoration-color: #a70505;
+}
+
+.center {
+  text-align: center;
+}
+
+.center2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: "Major Mono Display", monospace;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+
+a#nova-teaser {
+    display: block;
+    text-align: center;
+    width: 150px;
+    margin: 0px auto;
+    padding: 20px;
+    color: red;
+    font-family: GlacialIndifferenceB;
+    text-transform: uppercase;
+    border: 2px solid #FF0000;
+    background-color: #ff001f5b;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+.hero {
+  padding: 50px; 
+  text-align: center; 
+}
+
+.anim-card {
+  transition: transform 0.3s;
+}
+
+.anim-card:hover {
+  transform: translateY(-5px);
+}
